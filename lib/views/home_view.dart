@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/widgets/notes_view_body.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -6,12 +7,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home View'),
-      ),
-      body: const Center(
-        child: Text('Welcome to the Home View!'),
-      ),
+      body: NotesViewBody(),
     );
   }
 }
