@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:notes_app/views/edit_view.dart';
+import 'package:notes_app/views/edit_notes_view.dart';
 
 class NoteItem extends StatelessWidget {
   const NoteItem({super.key});
@@ -11,7 +11,7 @@ class NoteItem extends StatelessWidget {
       onDoubleTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => const EditView()),
+          MaterialPageRoute(builder: (context) => const EditNotesView()),
         );
       },
       child: Container(
