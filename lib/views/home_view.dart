@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:notes_app/constants.dart';
+import 'package:notes_app/widgets/add_note_bottom_sheet.dart';
 import 'package:notes_app/widgets/notes_view_body.dart';
 
 class HomeView extends StatelessWidget {
@@ -10,7 +12,7 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       body: NotesViewBody(),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: const Color.fromARGB(255, 104, 229, 206),
+        backgroundColor: kPrimaryColor,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
         onPressed: () {
           showModalBottomSheet(
@@ -19,12 +21,9 @@ class HomeView extends StatelessWidget {
             builder: (context) {
               return Padding(
                 padding: EdgeInsets.only(
-                  bottom:
-                      MediaQuery.of(
-                        context,
-                      ).viewInsets.bottom,
+                  bottom: MediaQuery.of(context).viewInsets.bottom,
                 ),
-                child: Container(),
+                child: const AddNoteBottomSheet(),
               );
             },
           );
@@ -34,4 +33,3 @@ class HomeView extends StatelessWidget {
     );
   }
 }
-
