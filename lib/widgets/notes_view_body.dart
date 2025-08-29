@@ -14,14 +14,18 @@ class NotesViewBody extends StatelessWidget {
           children: [
             const CustomAppBar(),
             Expanded(
-             child: ListView.builder(
-                itemCount: 10,
-                itemBuilder: (context, index) {
-                  return Padding(
-                    padding: const EdgeInsets.only(bottom: 4),
-                    child: NoteItem(),
-                  );
-                },
+             child: Padding(
+               padding: const EdgeInsets.symmetric(vertical: 8),
+               child: ListView.builder(
+                padding:EdgeInsets.zero,
+                  itemCount: 10,
+                  itemBuilder: (context, index) {
+                    return Padding(
+                      padding: const EdgeInsets.only(bottom: 4),
+                      child: NoteItem(),
+                    );
+                  },
+               ),
              )
            ),
           ],

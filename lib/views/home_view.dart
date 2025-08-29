@@ -11,15 +11,27 @@ class HomeView extends StatelessWidget {
       body: NotesViewBody(),
       floatingActionButton: FloatingActionButton(
         backgroundColor: const Color.fromARGB(255, 104, 229, 206),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(30),
-        ),
-        onPressed: () {},
-        child:  const Icon(
-          FontAwesomeIcons.plus,
-          color: Colors.black,
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+        onPressed: () {
+          showModalBottomSheet(
+            context: context,
+            isScrollControlled: true,
+            builder: (context) {
+              return Padding(
+                padding: EdgeInsets.only(
+                  bottom:
+                      MediaQuery.of(
+                        context,
+                      ).viewInsets.bottom,
+                ),
+                child: Container(),
+              );
+            },
+          );
+        },
+        child: const Icon(FontAwesomeIcons.plus, color: Colors.black),
       ),
     );
   }
 }
+
