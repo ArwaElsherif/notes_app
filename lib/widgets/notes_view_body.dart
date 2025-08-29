@@ -18,7 +18,7 @@ class NotesViewBody extends StatelessWidget {
                 itemCount: 10,
                 itemBuilder: (context, index) {
                   return Padding(
-                    padding: const EdgeInsets.only(bottom: 16),
+                    padding: const EdgeInsets.only(bottom: 4),
                     child: NoteItem(),
                   );
                 },
