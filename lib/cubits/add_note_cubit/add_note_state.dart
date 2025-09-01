@@ -8,8 +8,7 @@ final class AddNoteInitial extends AddNoteState {}
 final class AddNoteLoading extends AddNoteState {}
 
 final class AddNoteSuccess extends AddNoteState {
-  final List<String> notes; 
-  AddNoteSuccess(this.notes);
+
 }
 
 final class AddNoteFailure extends AddNoteState {
