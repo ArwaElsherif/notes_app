@@ -42,7 +42,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
                 vertical: 80,
                 horizontal: 12,
               ),
-              //maxLines: 3,
+              maxLines: 3,
             ),
             SizedBox(height: 120),
             BlocBuilder<AddNoteCubit, AddNoteState>(

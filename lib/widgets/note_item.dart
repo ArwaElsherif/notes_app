@@ -16,7 +16,7 @@ class NoteItem extends StatelessWidget {
       onDoubleTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => const EditNotesView()),
+          MaterialPageRoute(builder: (context) =>  EditNotesView(note: note,)),
         );
       },
       child: Container(
