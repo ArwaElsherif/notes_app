@@ -20,7 +20,7 @@ late  int currentIndex ;
 
 @override
   void initState() {
-  currentIndex = kColors.indexOf(Color(widget.note.color));
+  currentIndex = kColors.indexWhere((color) => color.toARGB32() == widget.note.color);
   super.initState();
 }
 
